@@ -14,7 +14,3 @@ RUN touch /var/log/cron.log
  
 # Run the command on container startup
 CMD cron && tail -f /var/log/cron.log
-
-COPY entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
