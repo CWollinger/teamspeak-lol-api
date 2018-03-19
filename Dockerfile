@@ -14,7 +14,7 @@ RUN touch /var/log/cron.log
 
 RUN mkdir /api
 
-RUN git clone https://github.com/planetteamspeak/ts3phpframework.git /api
+RUN git clone https://github.com/planetteamspeak//ts3phpframework.git /api/ts3phpframework
  
 # Run the command on container startup
 CMD ["cron", "-f"]
