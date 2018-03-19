@@ -13,4 +13,4 @@ RUN chmod 0644 /etc/cron.d/hello-cron
 RUN touch /var/log/cron.log
  
 # Run the command on container startup
-CMD [“cron”, “-f”]
+RUN /usr/bin/crontab /etc/cron.d/hello-cron
