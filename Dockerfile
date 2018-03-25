@@ -21,9 +21,12 @@ RUN chmod 0644 /etc/cron.d/hello-cron
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
 
+ADD crontab /root/
+RUN crontab /root/crontab
+
 RUN git clone https://github.com/planetteamspeak/ts3phpframework.git /api/ts3phpframework
 RUN chmod u+x /api/lolstatus.sh
 # Run the command on container startup
+WORKDIR /api
 
-CMD ["cron", "-f"]
-
+CMD /usr/sbin/cron -f
