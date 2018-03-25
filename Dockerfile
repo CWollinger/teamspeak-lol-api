@@ -31,4 +31,4 @@ WORKDIR /api
 
 
 CMD /usr/sbin/cron -f
-CMD printenv | grep LOL > /api/env.txt
+RUN printenv | grep LOL > /api/env.txt
