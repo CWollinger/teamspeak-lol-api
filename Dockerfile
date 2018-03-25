@@ -9,6 +9,7 @@ ENV LOL_PASSWORD Password
 ENV LOL_NICK Nickname
 
 RUN apt-get update && apt-get install -y curl php cron git php7.0-xml
+RUN mkdir /api
 
 COPY crontab /etc/cron.d/hello-cron
 COPY lolstatus.php /api
