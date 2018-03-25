@@ -20,7 +20,7 @@ $test = file_get_contents('lolstatus.tmp');
         TeamSpeak3::init();
         $ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$server["ts_query_admin"].":".$server["ts_query_password"]."@".$server["tsip"].":".$server["ts_query_port"]."/?server_port=".$server["tsport"]."&nickname=".$server["ts_query_user_nick"]."");
 
-        $client = $ts3_VirtualServer->channelGetByName("[cspacer0]► League of Legends Status ◄");
+        $client = $ts3_VirtualServer->channelGetByName($argv[6]);
         $properties = array("channel_description" => $test);
         if( $client->modify( $properties ) )
             echo "Done";
