@@ -28,5 +28,4 @@ $test = file_get_contents('lolstatus.tmp');
     } catch(Exception $e) {
         echo "Fehler!<br/>ErrorID: <b>". $e->getCode() ."</b>; Error Message: <b>". $e->getMessage() ."</b>;";
     }
-}
 ?>
