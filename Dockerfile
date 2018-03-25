@@ -8,7 +8,7 @@ ENV LOL_USER User
 ENV LOL_PASSWORD Password
 ENV LOL_NICK Nickname
 
-RUN apt-get update && apt-get install -y curl php cron git php7.0-xml
+RUN apt-get update && apt-get install -y curl php cron git php7.0-xml jq
 RUN mkdir /api
 
 COPY crontab /etc/cron.d/hello-cron
