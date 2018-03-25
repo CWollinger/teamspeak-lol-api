@@ -30,4 +30,4 @@ RUN chmod u+x /api/lolstatus.sh
 WORKDIR /api
 
 COPY entrypoint.sh /api
-ENTRYPOINT["/api/entrypoint.sh"
+ENTRYPOINT["/api/entrypoint.sh"]
