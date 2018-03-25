@@ -22,6 +22,6 @@ RUN chmod 0644 /etc/cron.d/hello-cron
 RUN touch /var/log/cron.log
 
 RUN git clone https://github.com/planetteamspeak/ts3phpframework.git /api/ts3phpframework
-
+chmod u+x /api/lolstatus.sh
 # Run the command on container startup
-CMD cron
+CMD ["/api/lolstatus.sh"]
