@@ -10,7 +10,9 @@ ENV LOL_NICK Nickname
 
 RUN apt-get update && apt-get install -y curl php cron git php7.0-xml
 
-ADD crontab /etc/cron.d/hello-cron
+COPY crontab /etc/cron.d/hello-cron
+COPY lolstatus.php /api
+COPY lolstatus.sh /api
  
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/hello-cron
