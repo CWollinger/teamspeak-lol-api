@@ -1,1 +1,1 @@
-* * * * * root /bin/bash /api/lolstatus.sh >> /var/log/cron.log 2>&1
+* * * * * root cd /api && /bin/bash /api/lolstatus.sh >> /var/log/cron.log 2>&1
