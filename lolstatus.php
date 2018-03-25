@@ -7,7 +7,7 @@
 ### - LoL Status
 
 $test = file_get_contents('lolstatus.tmp');
-    require_once('framework/libraries/TeamSpeak3/TeamSpeak3.php');
+    require_once('ts3phpframework/libraries/TeamSpeak3/TeamSpeak3.php');
     $server = array(
         "tsip" => $argv[1],
         "tsport" => $argv[2],
