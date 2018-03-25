@@ -28,5 +28,6 @@ RUN git clone https://github.com/planetteamspeak/ts3phpframework.git /api/ts3php
 RUN chmod u+x /api/lolstatus.sh
 # Run the command on container startup
 WORKDIR /api
+RUN printenv | grep LOL > /api/env.txt
 
 CMD /usr/sbin/cron -f
