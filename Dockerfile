@@ -24,8 +24,6 @@ RUN touch /var/log/cron.log
 RUN git clone https://github.com/planetteamspeak/ts3phpframework.git /api/ts3phpframework
 RUN chmod u+x /api/lolstatus.sh
 # Run the command on container startup
-<<<<<<< HEAD
-CMD ["/api/lolstatus.sh"]
-=======
+
 CMD ["cron", "-f"]
->>>>>>> parent of b0bb9a7... Update Dockerfile
+
