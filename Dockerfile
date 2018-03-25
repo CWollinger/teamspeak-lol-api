@@ -29,6 +29,5 @@ RUN chmod u+x /api/lolstatus.sh
 # Run the command on container startup
 WORKDIR /api
 
-
-CMD /usr/sbin/cron -f
-RUN printenv | grep LOL > /api/env.txt
+COPY entrypoint.sh /api
+ENTRYPOINT["/api/entrypoint.sh"
