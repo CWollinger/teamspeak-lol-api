@@ -26,4 +26,5 @@ RUN chmod u+x /api/lolstatus.sh
 WORKDIR /api
 
 COPY entrypoint.sh /api
+RUN chmod u+x /api/entrypoint.sh
 ENTRYPOINT ["/api/entrypoint.sh"]
