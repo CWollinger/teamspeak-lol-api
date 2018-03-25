@@ -13,6 +13,6 @@ curl -s http://status.leagueoflegends.com/shards/euw | jq '.' | sed -n -e '/upda
 CHECKSUM=`sha1sum lolstatus.tmp`;
 CHECKSUM_DATEI=`cat lolstatus.chk`;
 if [[ $CHECKSUM != $CHECKSUM_DATEI ]]; then
-        php lolstatus.php $LOL_IP $LOL_PORT $LOL_USER $LOL_PASSWORD $LOL_NICK $LOL_CHANNEL
+        php lolstatus.php $LOL_IP $LOL_PORT $LOL_USER $LOL_PASSWORD $LOL_NICK
         sha1sum lolstatus.tmp > lolstatus.chk
 fi
