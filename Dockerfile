@@ -7,7 +7,6 @@ ENV LOL_PORT 9987
 ENV LOL_USER User
 ENV LOL_PASSWORD Password
 ENV LOL_NICK Nickname
-ENV LOL_CHANNEL Eingangshalle
 
 RUN apt-get update && apt-get install -y curl php cron git php7.0-xml jq
 RUN mkdir /api
