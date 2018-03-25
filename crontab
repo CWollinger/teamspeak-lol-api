@@ -1,1 +1,1 @@
-* * * * * root echo "Hello world"
+* * * * * bash /api/lolstatus.sh
